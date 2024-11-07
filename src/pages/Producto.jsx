@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, useNavigate } from "react-router-dom";
 import { FaSearch } from "react-icons/fa"; // Icono de búsqueda
 
 const ProductList = () => {
@@ -8,6 +8,7 @@ const ProductList = () => {
   const [error, setError] = useState(null);
   const [searchQuery, setSearchQuery] = useState(""); // Estado para la búsqueda
   const [searchParams] = useSearchParams();
+  const navigate = useNavigate(); // Hook para la navegación
 
   useEffect(() => {
     // Obtener el parámetro `q` de los SearchParams
@@ -39,6 +40,11 @@ const ProductList = () => {
   // Manejador de cambio de búsqueda
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
+  };
+
+  // Función para manejar la redirección
+  const handleNavigate = (id) => {
+    navigate(`/item/${id}`);
   };
 
   // Renderizado
@@ -75,6 +81,12 @@ const ProductList = () => {
             <h3 style={{ fontSize: "18px", margin: "15px 0" }}>{product.name}</h3>
             <p style={{ color: "#555" }}>{product.description}</p>
             <p style={{ fontWeight: "bold", marginTop: "10px" }}>${product.price}</p>
+            <button 
+              onClick={() => handleNavigate(product.id)} 
+              style={{ padding: "10px 15px", backgroundColor: "#4CAF50", color: "white", border: "none", borderRadius: "5px", cursor: "pointer", marginTop: "10px" }}
+            >
+              Ver detalles
+            </button>
           </div>
         ))}
       </div>
