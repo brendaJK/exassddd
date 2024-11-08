@@ -16,6 +16,7 @@ const ProductList = () => {
 
     if (query) {
       setLoading(true);
+      console.log(query);
       fetch(`https://exassddd.vercel.app/api/items?q=${query}`)
         .then((response) => {
           if (!response.ok) {
@@ -24,7 +25,7 @@ const ProductList = () => {
           return response.json();
         })
         .then((data) => {
-          setProducts(data.items || []);
+          setProducts(data || []);
           setLoading(false);
         })
         .catch((error) => {
