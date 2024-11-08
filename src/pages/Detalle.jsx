@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 const Detalle = () => {
@@ -46,7 +46,7 @@ const Detalle = () => {
       body: JSON.stringify(saleData),
     })
       .then((response) => response.json())
-      .then((data) => {
+      .then(() => {
         alert("Venta registrada correctamente");
       })
       .catch((error) => {

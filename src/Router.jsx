@@ -1,15 +1,16 @@
-import React from "react";
+//import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home"; // Página de búsqueda
-import SearchResults from "./pages/SearchResults"; // Resultados de búsqueda
-import ProductDetail from "./pages/ProductDetail"; // Detalle del producto
-import SalesList from "./pages/SalesList"; // Lista de compras registradas
+import Home from "./pages/Busqueda"; // Página de búsqueda
+import SearchResults from "./pages/Producto"; // Resultados de búsqueda
+import ProductDetail from "./pages/Detalle"; // Detalle del producto
+import SalesList from "./pages/Ventas"; // Lista de compras registradas
 
 function AppRouter() {
     return (
         <Router>
             <Routes>
-                {/* Página principal con caja de búsqueda */}
+
+                {/* Resultados de búsqueda */}
                 <Route path="/" element={<Home />} />
 
                 {/* Resultados de búsqueda */}

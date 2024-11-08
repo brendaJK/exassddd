@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useSearchParams, useNavigate } from "react-router-dom";
-import { FaSearch } from "react-icons/fa"; // Icono de búsqueda
+
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -55,7 +55,7 @@ const ProductList = () => {
   return (
     <div>
       <div style={{ display: "flex", alignItems: "center", marginBottom: "20px" }}>
-        <FaSearch style={{ marginRight: "10px" }} />
+      
         <input
           type="text"
           value={searchQuery}
