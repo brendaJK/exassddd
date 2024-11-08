@@ -36,6 +36,7 @@ const Detalle = () => {
       brand: productData.brand,
       stock: productData.stock,
       category: productData.category,
+      quantity: 1,
     };
 
     fetch("https://exassddd.vercel.app/api/addSale", {
