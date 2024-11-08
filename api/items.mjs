@@ -11,11 +11,11 @@ export async function GET(request) {
       }
   
       const data = await response.json();
-      const products = data.products
+      const products = data
   
       // Filtrar productos que contengan la query en su título o descripción
       const filteredProducts = products.filter(product =>
-        product.brand.toLowerCase().includes(query.toLowerCase()) ||
+        product.title.toLowerCase().includes(query.toLowerCase()) ||
         product.category.toLowerCase().includes(query.toLowerCase())
       );
   
