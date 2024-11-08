@@ -1,5 +1,5 @@
 import  { useState, useEffect } from 'react';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+
 
 const SalesList = () => {
   const [sales, setSales] = useState({});
@@ -31,21 +31,21 @@ const SalesList = () => {
 
   if (loading) {
     return (
-      <Card className="w-full">
-        <CardContent className="p-4">
+      <div className="w-full">
+        <div className="p-4">
           <p className="text-center text-gray-500">Cargando ventas...</p>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
     );
   }
 
   if (error) {
     return (
-      <Card className="w-full">
-        <CardContent className="p-4">
+      <div className="w-full">
+        <div className="p-4">
           <p className="text-center text-red-500">Error: {error}</p>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
     );
   }
 
@@ -57,20 +57,20 @@ const SalesList = () => {
 
   if (!salesArray.length) {
     return (
-      <Card className="w-full">
-        <CardContent className="p-4">
+      <div className="w-full">
+        <div className="p-4">
           <p className="text-center text-gray-500">No hay ventas disponibles</p>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
     );
   }
 
   return (
-    <Card className="w-full">
-      <CardHeader>
-        <CardTitle>Lista de Ventas</CardTitle>
-      </CardHeader>
-      <CardContent>
+    <div className="w-full">
+      <div>
+        <div>Lista de Ventas</div>
+      </div>
+      <div>
         <div className="overflow-x-auto">
           <table className="w-full border-collapse">
             <thead>
@@ -118,8 +118,8 @@ const SalesList = () => {
             </p>
           </div>
         </div>
-      </CardContent>
-    </Card>
+      </div>
+    </div>
   );
 };
 

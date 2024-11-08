@@ -1,5 +1,6 @@
 import  { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Busqueda.css";
 
 
 function Home() {
@@ -17,7 +18,7 @@ function Home() {
     return (
         <div className="home-container">
             <img
-                src="/assets/logo.png" // Reemplaza con la ruta de tu logo
+                src="/bolso.png" // Reemplaza con la ruta de tu logo
                 alt="Logo Bazar Universal"
                 className="home-logo"
             />
