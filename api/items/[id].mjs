@@ -12,7 +12,7 @@ export async function GET(request) {
 
         let products = await response.json();
 
-        products = products.products;
+        products = products;
 
 
         // Buscar el producto por ID
