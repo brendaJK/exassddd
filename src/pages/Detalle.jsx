@@ -29,7 +29,7 @@ const Detalle = () => {
   // Función para enviar los datos de la venta a la API
   const handleAddSale = () => {
     const saleData = {
-      productId: productData.productId,
+      productId: productData.id,
       title: productData.title,
       price: productData.price,
       description: productData.description,
