@@ -12,7 +12,7 @@ const Detalle = () => {
     fetch(`https://exassddd.vercel.app/api/items/${id}`)
       .then((response) => {
         if (!response.ok) {
-          throw new Error("Error al cargar los detalles del producto");
+          throw new Error("ssError al cargar los detalles del producto");
         }
         return response.json();
       })
