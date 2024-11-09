@@ -65,7 +65,7 @@ const Detalle = () => {
     <div style={{ padding: "20px" }}>
       <h2>{productData.title}</h2>
       <img
-        src={productData.image}
+        src={productData.thumbnail}
         alt={productData.title}
         style={{ width: "300px", height: "300px", objectFit: "cover", marginBottom: "20px" }}
       />

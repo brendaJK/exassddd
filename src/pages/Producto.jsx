@@ -76,7 +76,7 @@ const ProductList = () => {
         {products.map((product) => (
           <div key={product.id} className="product-card" style={{ border: "1px solid #ddd", borderRadius: "8px", padding: "15px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)" }}>
             <img
-              src={product.image}
+              src={product.thumbnail}
               alt={product.name}
               style={{ width: "100%", height: "200px", objectFit: "cover", borderRadius: "8px" }}
             />
