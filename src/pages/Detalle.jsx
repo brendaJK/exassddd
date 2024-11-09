@@ -90,11 +90,11 @@ const Detalle = () => {
       <div className="w-full max-w-2xl mx-auto px-4">
         <div className="bg-white rounded-lg shadow-lg p-6">
           <div className="text-center mb-6">
-          <img
-    src="/bolso.png" // Reemplaza con la ruta de tu logo
-    alt="Logo Bazar Universal"
-    className="home-logo"
-/>
+
+
+
+
+
             <h1 className="text-2xl font-bold text-gray-900 mb-2">
               {productData.title}
             </h1>

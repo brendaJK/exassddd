@@ -83,20 +83,26 @@ const ProductList = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
+      <div className="flex justify-center mb-8">
+        <img
+          src="/bolso.png"
+          alt="Logo Bazar Universal"
+          className="h-16 w-auto"
+          onClick={() => navigate("/sales")}
+        />
+      </div>
       <form 
         onSubmit={handleSearch}
         className="flex flex-col sm:flex-row gap-4 items-center justify-center mb-8 max-w-4xl mx-auto"
       >
-        <div className="relative w-full max-w-md">
-          <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
-            <Search size={20} />
-          </div>
+        <div className="relative w-full max-w-md flex items-center bg-white rounded-lg border border-gray-300 focus-within:ring-2 focus-within:ring-blue-500 focus-within:border-transparent">
+          <Search className="h-4 w-4 text-gray-400 ml-3" />
           <input
             type="text"
             value={searchQuery}
             onChange={handleSearchChange}
             placeholder="Buscar productos..."
-            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full pl-2 pr-4 py-2 rounded-lg focus:outline-none"
           />
         </div>
         <button 
